@@ -312,7 +312,8 @@
                                     <div class="clear"></div>
                                 </div>
                                 <p>
-                                    <a href="{{ route('login') }}" class="btn btn-master btn-secondary w-100 mt-3">
+                                    <a href="{{ route('auth.user.login') }}"
+                                        class="btn btn-master btn-secondary w-100 mt-3">
                                         Start With This Plan
                                     </a>
                                 </p>
