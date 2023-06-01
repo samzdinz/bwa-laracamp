@@ -13,7 +13,8 @@ class CreateCheckOutsTable extends Migration
      */
     public function up()
     {
-        Schema::create('check_outs', function (Blueprint $table) {
+        Schema::dropIfExists('checkouts');
+        Schema::create('checkouts', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained();
             $table->foreignId('camp_id')->constrained();
@@ -33,6 +34,6 @@ class CreateCheckOutsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('check_outs');
+        Schema::dropIfExists('checkouts');
     }
 }
