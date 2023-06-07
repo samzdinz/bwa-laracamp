@@ -14,6 +14,7 @@
                 </div>
             </div>
             <div class="row my-5">
+                @include('components.alert')
                 <table class="table">
                     <tbody>
                         @forelse ($checkouts as $checkout)
@@ -41,13 +42,18 @@
 
                                 </td>
                                 <td>
-                                    <a href="https://wa.me/0819xxxxxx/halo saya ingin checkout bootcamps kelas {{ $checkout->title }}"
+                                    <a href="https://wa.me/0819xxxxxx?text=halo saya ingin checkout bootcamps kelas {{ $checkout->Camp->title }}"
                                         class="btn btn-primary">
-                                        Get Invoice
+                                        Contact Support
                                     </a>
                                 </td>
                             </tr>
                         @empty
+                            <tr>
+                                <td colspan="5">
+                                    <h3>No Data</h3>
+                                </td>
+                            </tr>
                         @endforelse
 
 
